@@ -1,16 +1,24 @@
 import 'package:fix_mates_admin/util/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fix_mates_admin/widget/side_menu_widget.dart';
 
 class SevricePartner extends StatelessWidget {
   const SevricePartner({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDesktop = Responsive.isDesktop(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('Service Partners'),
       ),
+      drawer: !isDesktop
+          ? const SizedBox(
+              width: 250,
+              child: SideMenuWidget(),
+            )
+          : null,
       body: ResponsiveBuilder(
         builder: (context, size) {
           if (Responsive.isMobile(context)) {
