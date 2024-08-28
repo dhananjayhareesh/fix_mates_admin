@@ -6,7 +6,7 @@ class SideMenuData {
     MenuModel(icon: Icons.home, title: 'Dashboard'),
     MenuModel(icon: Icons.person, title: 'New User Request'),
     MenuModel(icon: Icons.run_circle, title: 'Service Partners'),
-    MenuModel(icon: Icons.category, title: 'Categories'),
+    MenuModel(icon: Icons.category, title: 'Bookings'),
     MenuModel(icon: Icons.money, title: 'Transactions'),
   ];
 }
